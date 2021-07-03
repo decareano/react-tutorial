@@ -30,6 +30,15 @@ const TableHeader = () => {
           <td>Dennis</td>
           <td>Bartender</td>
         </tr>
+        <tr>
+          <td>Marcelo</td>
+          <td>Developer</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>Teacher</td>
+        </tr>
+        
       </tbody>
     )
   }
