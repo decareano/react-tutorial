@@ -17,11 +17,11 @@ const TableHeader = () => {
 
   class Table extends Component {
     render() {
-      const {characterData} = this.props
+      const {charData} = this.props
       return (
         <table>
           <TableHeader />
-          <TableBody characterData={characterData} />
+          <TableBody charData={charData} />
         </table>
       )
     }
