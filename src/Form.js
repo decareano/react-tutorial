@@ -29,7 +29,7 @@ render() {
     const { name, job } = this.state;
   
     return (
-      <form>
+      <form class="form-inline">
         <label htmlFor="name">Name</label>
         <input 
           type="text"
