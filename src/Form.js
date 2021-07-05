@@ -31,7 +31,7 @@ render() {
     return (
       <form>
         <label htmlFor="name">Name</label>
-        <input
+        <input 
           type="text"
           name="name"
           id="name"
@@ -44,7 +44,7 @@ render() {
           id="job"
           value={job}
           onChange={this.handleChange} />
-          <input
+          <input className="btn btn-primary"
             type="button"
             value="Submit"
             onClick={this.submitForm} />
@@ -54,3 +54,4 @@ render() {
 } 
 
 export default Form;
+
