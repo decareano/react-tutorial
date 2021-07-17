@@ -1,15 +1,45 @@
 import React, {Component} from 'react'
 import Table from './Table'
 import Form from './Form'
-
+import config from './config'
+import Firebase from 'firebase'
 
 
 
 class App extends Component {
-  state = {
-    characters: [],
+  constructor(props) {
+    super(props)
+    Firebase.initializeApp(config);
+    this.state = {
+      characters: []
+    }
   }
 
+  componentDidMount() {
+    this.getUserData()
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState !== this.state) {
+      this.writeUserData();
+    }
+  }
+
+  writeUserData = () => {
+    Firebase.database()
+      .ref("/")
+      .set(this.state);
+    console.log("DATA SAVED");
+  };
+
+  getUserData = () => {
+    let ref = Firebase.database().ref("/");
+    ref.on("value", snapshot => {
+      const state = snapshot.val();
+      this.setState(state);
+      console.log("Data in")
+    });
+  };
 
   removeCharacter = (index) => {
     const {characters} = this.state
