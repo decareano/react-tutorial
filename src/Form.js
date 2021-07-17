@@ -8,7 +8,6 @@ class Form extends Component {
 
   state = this.initialState
 
-
 handleChange = (event) => {
     const {name, value} = event.target
 
@@ -16,9 +15,6 @@ handleChange = (event) => {
         [name]: value
     })
 }
-
-
-
 
 submitForm = () => {
     this.props.handleSubmit(this.state)
