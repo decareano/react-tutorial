@@ -3,6 +3,7 @@ import Table from './Table'
 import Form from './Form'
 import config from './config'
 import Firebase from 'firebase'
+//import axios from 'axios'
 
 
 
@@ -19,8 +20,9 @@ class App extends Component {
     this.getUserData()
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState !== this.state) {
+
+  componentDidUpdate(beforeState) {
+    if (beforeState !== this.state) {
       this.writeUserData();
     }
   }
@@ -37,8 +39,9 @@ class App extends Component {
     ref.on("value", snapshot => {
       const state = snapshot.val();
       this.setState(state);
-      console.log("Data in")
+      
     });
+    console.log('Data retrieved')
   };
 
   removeCharacter = (index) => {
