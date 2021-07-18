@@ -33,6 +33,8 @@ render() {
           id="name"
           value={name}
           onChange={this.handleChange} />
+
+        
         <label htmlFor="job">Job</label>
         <input
           type="text"
@@ -40,6 +42,7 @@ render() {
           id="job"
           value={job}
           onChange={this.handleChange} />
+
           <input className="btn btn-primary"
             type="button"
             value="Submit"
