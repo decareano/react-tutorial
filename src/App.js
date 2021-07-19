@@ -3,7 +3,6 @@ import Table from './Table'
 import Form from './Form'
 import config from './config'
 import Firebase from 'firebase'
-//import axios from 'axios'
 
 
 
@@ -54,12 +53,18 @@ class App extends Component {
   }
 
   render() {
+    
     const { characters } = this.state
     return (
+     
+
+      
       <div className="container">
+      
       <Table characterData={characters} removeCharacter={this.removeCharacter} />
       <Form handleSubmit={this.handleSubmit} />
       </div> 
+      
     )
   }
 
