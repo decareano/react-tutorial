@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Table from './Table'
 import Form from './Form'
 import config from './config'
@@ -16,18 +16,22 @@ function App() {
   // the [car, setCar] is an array: car[0] and setCar[1]...ditto for year
   const [car, setCar] = useState("Ford")
   const [year, setYear] = useState("2008")
+  const [count, setCount] = useState(0)
   
   function WantToUpdate() {
     setCar("Chevy")
     setYear("2005")
+    setCount(count + 1)
   }
-
+  useEffect(() => {
+    document.title = `You made ${count} updates`
+  })
   
 
   return (
     <div>
     <p>Your car is a {car} {year} </p>
-    
+    <p>You clicked {count} times</p>
     <button onClick={ WantToUpdate } >
       Click me
     </button>
