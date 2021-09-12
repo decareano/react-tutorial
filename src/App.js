@@ -30,8 +30,8 @@ function App() {
 
   return (
     <div>
-    <p>Your car is a {car} {year} </p>
-    <p>You clicked {count} times</p>
+    <p>Your car is a {car} {year}. And you clicked {count} times</p>
+   
     <button onClick={ WantToUpdate } >
       Click me
     </button>
