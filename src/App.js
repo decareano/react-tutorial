@@ -4,7 +4,7 @@ import Form from './Form'
 import config from './config'
 import Firebase from 'firebase'
 
-const Instagram = require('instagram-web-api')
+
 
 
 
