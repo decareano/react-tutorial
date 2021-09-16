@@ -42,24 +42,18 @@ import Firebase from 'firebase'
 //   )
 // }
 
-function FriendStatus(props) {
-  const [isOnline, setIsOnline] = useState(null);
+
+
+function App(props) {
+  //name = "marcelo"
+  const message = `Hello, ${props.name}!`;   // Calculates output
+  
 
   useEffect(() => {
-    function handleStatusChange(status) {
-      setIsOnline(status.isOnline);
-    }
-    chatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
-    // Specify how to clean up after this effect:
-      return function cleanup() {
-      chatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
-    };
-  });
-
-  if (isOnline === null) {
-    return 'Loading...';
-  }
-  return isOnline ? 'Online' : 'Offline';
+    document.title = `Greetings to ${props.name}`
+    }, [])
+    
+  return <div>{message}</div>;  
 }
 
 
