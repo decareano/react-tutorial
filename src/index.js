@@ -8,11 +8,11 @@ import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
 
 ReactDOM.render(
-  <Router>
-    <Auth0ProviderWithHistory>
-      <App />
-    </Auth0ProviderWithHistory>
-  </Router>,
+  // <Router>
+  //   <Auth0ProviderWithHistory>
+      <App name="eric" />,
+  //   </Auth0ProviderWithHistory>
+  // </Router>,
   document.getElementById("root")
 );
 
