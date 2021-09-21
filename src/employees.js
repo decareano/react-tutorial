@@ -1,4 +1,5 @@
 import React from 'react'
+
 import ReactDOM from 'react-dom';
 
 
@@ -41,8 +42,12 @@ function DisplayEmployees(props) {
             {/* //return the contents of listElements */}
             {listElements}
         </div>
+
     )
+
+
 }
+
 
 const employees = [
     {Id:101,Name:'Abhinav',Location:'Bangalore',Salary:12345},
@@ -51,5 +56,6 @@ const employees = [
 ]
     
 const element = <DisplayEmployees empleadosLista={employees}></DisplayEmployees> 
+
     
 ReactDOM.render(element, document.getElementById("root"))
