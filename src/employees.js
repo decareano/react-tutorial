@@ -36,10 +36,9 @@ const EmpHeader = () => {
   }
 
 
-class Employees extends React.Component {
-    render() {
-        const {employeeData} = this.props
+const Employees = (props) => {
     
+        const {employeeData} = props
 
     //const {employeeData} = props
 
@@ -51,5 +50,5 @@ class Employees extends React.Component {
         </employee>
     )
 }
-}
+
 export default Employees
