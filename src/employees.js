@@ -15,21 +15,22 @@ const EmpHeader = () => {
   }
 
   const EmpBody = (props) => {
-    const list = props.employeeData.map((row, index) => {
-        return (
+    
+    // const list = props.employeeData.map((emp) => {
+    //     return (
             
-            <tr key={index}>
-                <td>{row.id}</td>
-                <td>{row.name}</td>
-                <td>{row.location}</td>
-                <td>{row.salary}</td>
-            </tr>
+    //         <tr key={emp.Id} data={emp}>
+    //             {/* <td>{row.id}</td>
+    //             <td>{row.name}</td>
+    //             <td>{row.location}</td>
+    //             <td>{row.salary}</td> */}
+    //         </tr>
             
-        )
-    })
+    //     )
+    // })
     
     return (
-        <tbody>{list}</tbody>
+        <tbody></tbody>
     )
      
     
@@ -37,12 +38,11 @@ const EmpHeader = () => {
 
 
 const Employees = (props) => {
-    
+        // // passing the props from app.js. 
+        // props name is employeeData so it's assigned to props
         const {employeeData} = props
-
-    //const {employeeData} = props
-
     return (
+        // if I put a div it works as well
         <employee>
             <EmpHeader />
             <EmpBody employeeData={employeeData} />
