@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Component } from 'react'
 
 
-import Employees from './Employees'
+import Employees from './employees'
 
 
 
@@ -41,6 +41,7 @@ function App() {
       {/* // props name is employeeData....can be whatever you want. the expression is the data contained in the employees array
       and it needs to be passed to the other side (employees.js*/}
       <Employees employeeData={employees}/>
+      
 
     </div>
   );
